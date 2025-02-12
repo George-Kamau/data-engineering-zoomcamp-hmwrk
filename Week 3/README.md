@@ -63,5 +63,7 @@ where tpep_dropoff_datetime BETWEEN '2024-03-01' and '2024-03-15';
 Select distinct VendorID from `earnest-setup-415116.ny_taxi.yellow_tripdata_hwk_wk3_partitioned_and_clustered` --26.84MB 
 where tpep_dropoff_datetime BETWEEN '2024-03-01' and '2024-03-15';
 ```
-
+### Bonus Question
+Zero bytes will be process for the ``` SELECT COUNT (*)``` query.
+This is because BigQuery mainatains metadata about tables which includes the count of rows. So it will simply fetch this information about that table.
 
